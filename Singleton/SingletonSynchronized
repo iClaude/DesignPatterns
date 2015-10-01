@@ -1,0 +1,22 @@
+public class MySingleton {
+    // volatile makes sure that changes are immediately visible to all threads.
+    private volatile static Singleton instance = null;
+ 
+    // The constructor is private: the creation of instances must be controlled.
+    private MySingleton() {}
+ 
+    // This method is used to obtain the unique instance of this class, in a 
+    // thread-safe manner, creating it if necessary.
+    public static Singleton getMySingleton() {
+        if (instance == null) {
+            // Only this part of the code must be synchronized, because the 
+            // variable “instance” is of type volatile.
+            synchronized (MySingleton.class){
+              // I’m not sure to be the first thread to access this method
+              if (instance == null)
+                 instance = new Singleton();
+            }
+        }
+        return instance;
+    }
+}

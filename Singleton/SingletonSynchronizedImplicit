@@ -1,0 +1,19 @@
+public class Singleton { 
+    /**
+    * When this class is loaded into memory the constant INSTANCE is created, and this 
+    * operation is thread-safe.
+    */
+   private final static Singleton INSTANCE = new Singleton();
+ 
+  /**
+   * The constructor is private: the creation of instances must be controlled.
+   */
+  private Singleton() {}
+ 
+  /**
+   * Access point to the Singleton.
+   */
+  public static Singleton getInstance() {
+    return INSTANCE;
+  }
+}

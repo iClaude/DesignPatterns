@@ -1,0 +1,23 @@
+public class Singleton { 
+   /**
+   * The constructor is private: the creation of instances must be controlled.
+   */
+  private Singleton() {}
+ 
+  /**
+   * The class Container is inizialized/loaded into memory when getInstance() is
+   * is invoked for the first time, that is when Container.INSTANCE is accessed for
+   * the first time and in a thread-safe way.
+   */
+  private static class Container { 
+    private final static Singleton ISTANCE = new Singleton();
+  }
+ 
+  /**
+   * Accesso point to the Singleton. It makes sure that the constant INSTANCE is created
+   * only one time (Singleton) and only when this method is invoked, not before.
+   */
+  public static Singleton getInstance() {
+    return Container.INSTANCE;
+  }
+}

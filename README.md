@@ -1,3 +1,2 @@
 # DesignPatterns
-Code examples of design patterns in Java.
-Complete tutorials about the code of this repository can be found here: http://gofdesignpatternsjava.blogspot.it/
+Code examples of the tutorials about Design Patterns in Java from the blog: http://gofdesignpatternsjava.blogspot.it/
